@@ -1,3 +1,7 @@
+# - R - TUTORIAL
+ - https://data-flair.training/blogs/rstudio-tutorial/
+ 
+
 # R - Scripts R
 - INSTALLED.PACKAGES - VERIFICA SE O PACOTE EXISTE
 
