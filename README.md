@@ -1,5 +1,7 @@
 # - R - TUTORIAL
  - https://data-flair.training/blogs/rstudio-tutorial/
+ - https://www.tutorialspoint.com/r/r_pie_charts.htm
+ 
  
 
 # R - Scripts R
