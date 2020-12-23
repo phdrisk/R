@@ -17,3 +17,34 @@ for (pkg in pkgs) {
 
 ## - COMANDO QUE INSTALA O H2O
 install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
+
+
+# RMySQL
+## CONEXÃO
+```
+library(RMySQL)
+
+
+connection <- function(){
+  tryCatch({
+    conn = dbConnect(MySQL(),db="phdrisk",user="user",password="12345678",host="xxx.xxx.xxx",port=3306)
+    
+    return(conn)
+  })
+}
+    
+
+storiesDb <- connection()
+
+dbListTables(storiesDb)
+dbDisconnect(storiesDb)
+ ```
+ ## INSERÇÃO (INSERT)
+ ```
+ query<- "INSERT INTO teste (campo1,campo2,data) VALUES ('campo1','campo2',NOW())"
+rsInsert <- dbSendQuery(storiesDb, query)
+
+query2<- "INSERT INTO teste set campo1='campo1',campo2='campo2',data=NOW()"
+rsInsert <- dbSendQuery(storiesDb, query2)
+```
+## SELEÇÃO (SELECT) 
