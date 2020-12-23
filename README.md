@@ -58,3 +58,17 @@ dbRows <- dbFetch(rs)
   --- |---|-------|-------|-----  
    1  |1  |campo1 |campo2 |2020-12-23
    2  |2  |campo1 |campo2 |2020-12-23
+
+
+
+~~~javascript
+Esta é uma linha de código em Javascript.
+~~~
+
+~~~php
+Esta é uma linha de código em PHP.
+~~~
+
+~~~html
+Esta é uma linha de código em HTML.
+~~~
