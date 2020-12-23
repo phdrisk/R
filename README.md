@@ -9,12 +9,12 @@
 
 
 ## COMANDO QUE VERIFICA SE O PACOTE EXISTE, CASO CONTRARIO INSTALA
-
+```
 pkgs <- c("RCurl","jsonlite")
 for (pkg in pkgs) {
   if (! (pkg %in% rownames(installed.packages()))) { install.packages(pkg) }
 }
-
+```
 ## - COMANDO QUE INSTALA O H2O
 install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
 
@@ -24,20 +24,20 @@ install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws
 ```
 library(RMySQL)
 
-
 connection <- function(){
   tryCatch({
     conn = dbConnect(MySQL(),db="phdrisk",user="user",password="12345678",host="xxx.xxx.xxx",port=3306)
-    
     return(conn)
   })
 }
     
+storiesDb <- connection() 
 
-storiesDb <- connection()
-
-dbListTables(storiesDb)
-dbDisconnect(storiesDb)
+- LISTA AS TABELAS DO BANCO
+   dbListTables(storiesDb)
+   
+- DESCONECTA
+  dbDisconnect(storiesDb)
  ```
  ## INSERÇÃO (INSERT)
  ```
