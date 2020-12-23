@@ -48,3 +48,13 @@ query2<- "INSERT INTO teste set campo1='campo1',campo2='campo2',data=NOW()"
 rsInsert <- dbSendQuery(storiesDb, query2)
 ```
 ## SELEÇÃO (SELECT) 
+```
+query <- "SELECT * FROM teste";
+rs <- dbSendQuery(storiesDb, query)
+dbRows <- dbFetch(rs)
+```
+
+  seq |id |campo1 |campo2 | data|
+  --- |---|-------|-------|-----  
+   1  |1  |campo1 |campo2 |2020-12-23
+   2  |2  |campo1 |campo2 |2020-12-23
