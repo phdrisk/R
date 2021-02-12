@@ -13,6 +13,8 @@
 pkgs <- c("RCurl","jsonlite")
 for (pkg in pkgs) {
   if (! (pkg %in% rownames(installed.packages()))) { install.packages(pkg) }
+  or 
+  if (! (pkg %in% (.packages())) { install.packages(pkg) }
 }
 ```
 ## - COMANDO QUE INSTALA O H2O
